@@ -7,6 +7,18 @@
   the image credit styling and the flexbox implementation.
 */
 
+header {
+  color: navy;
+}
+
+h2 {
+  color: darkgoldenrod;
+}
+
+h3 {
+  color: darkslategray;
+}
+
 img {
   max-width: 300px;
   max-height: 300px;
