@@ -1,3 +1,12 @@
+/*
+  Name: Mack McCall
+  Date: 02.20.2026
+  CSC 372-01
+
+  This is the script.js page for my campus food blog. It includes the implementation
+  of the favorites feature with the running total at the bottom of the page.
+*/
+
 document.addEventListener("DOMContentLoaded", function () {
   const dishes = document.querySelectorAll(".dish");
 
@@ -55,12 +64,22 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         const listItems = favoritesList.querySelectorAll("li");
         listItems.forEach((listItem) => {
-          if (listItem.textContent.startsWith(dishName)) {
-            total -= dish.priceTag.substring(1);
-            totalSpan.textContent = total;
+          if (
+            listItem.textContent
+              .toLowerCase()
+              .startsWith(dishName.toLowerCase())
+          ) {
             listItem.remove();
           }
         });
+
+        dish.style.border = "1px solid #ddd";
+
+        total -= price;
+        totalSpan.textContent = total;
+
+        button.textContent = "Add to Favorites";
+        isFavorited = false;
       }
     });
   });
