@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   totalDisplay.textContent = "Total Price: $";
 
   const totalSpan = document.createElement("span");
-  totalSpan.id = "total=price";
+  totalSpan.id = "total-price";
   totalSpan.textContent = "0";
 
   totalDisplay.appendChild(totalSpan);
